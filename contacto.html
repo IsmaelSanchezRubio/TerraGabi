@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="icon" href="assets/ico.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Terra Gabi - Cocina Mediterránea Coreana</title>
+    <!-- Carga de Tailwind CSS CDN para estilos rápidos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace a la fuente Inter de Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Enlace a Font Awesome para iconos de redes sociales -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Enlace a tu archivo de estilos personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen flex flex-col fade-in">
+    <!-- Header de la Página -->
+    <header
+      class="header-bg text-white shadow-lg py-4 px-6 md:px-12 rounded-b-xl"
+    >
+      <nav
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <!-- Nombre del Restaurante -->
+        <a
+          href="index.html"
+          class="text-4xl font-bold text-primary mb-4 md:mb-0 hover:text-primary-hover transition-colors duration-300"
+        >
+          Terra Gabi
+          <span class="text-xl font-normal text-secondary-text">가비</span>
+        </a>
+        <!-- Botones de Navegación -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="carta.html" class="btn-primary">Carta</a>
+          <a href="reserva.html" class="btn-primary">Reserva de Mesa</a>
+          <a href="contacto.html" class="btn-primary">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido Principal de la Página de Contacto -->
+    <main class="flex-grow container mx-auto px-6 py-12 md:py-16">
+      <h1
+        class="text-5xl md:text-6xl font-extrabold text-primary text-center mb-12 leading-tight"
+      >
+        Contáctanos
+      </h1>
+
+      <!-- Sección de Ubicación y Descripción -->
+      <section class="bg-section-bg rounded-xl shadow-xl p-8 mb-12">
+        <h2 class="text-4xl font-bold text-primary mb-6 text-center">
+          Nuestra Ubicación
+        </h2>
+        <p
+          class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-main-text text-center"
+        >
+          Terra Gabi se encuentra en el corazón del vibrante
+          <strong class="text-primary"
+            >Puerto Deportivo de Mazagón, Huelva</strong
+          >. Disfruta de nuestras vistas al mar mientras saboreas una
+          experiencia culinaria única que fusiona los sabores del Mediterráneo
+          con la esencia de Corea. Estamos ubicados en un entorno privilegiado,
+          ideal para una comida relajante o una cena especial.
+        </p>
+        <!-- Mapa de Google Maps -->
+        <div class="map-container rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1328.1050157309887!2d-6.833127463651778!3d37.13279299514241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzfCsDA3JzU4LjEiTiA2wrA0OSc1NS40Ilc!5e0!3m2!1ses!2ses!4v1752336591157!5m2!1ses!2ses"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Terra Gabi en Google Maps"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Sección de Información de Contacto -->
+      <section class="bg-section-bg rounded-xl shadow-xl p-8 mb-12 text-center">
+        <h2 class="text-4xl font-bold text-primary mb-6">
+          Información de Contacto
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 text-main-text text-lg"
+        >
+          <div>
+            <h3 class="text-2xl font-semibold text-primary mb-2">Teléfono</h3>
+            <p>
+              <a
+                href="tel:+34123456789"
+                class="hover:text-primary-hover transition-colors duration-300"
+                >+34 xxx xxx xxx</a
+              >
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-primary mb-2">
+              Correo Electrónico
+            </h3>
+            <p>
+              <a
+                href="mailto:info@terragabi.com"
+                class="hover:text-primary-hover transition-colors duration-300"
+                >info@terragabi.com</a
+              >
+            </p>
+          </div>
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-semibold text-primary mb-2">Horario</h3>
+            <p>Martes a Domingo: 13:00 - 16:00 y 20:00 - 23:00</p>
+            <p>Lunes: Cerrado</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Redes Sociales -->
+      <section class="bg-section-bg rounded-xl shadow-xl p-8 text-center">
+        <h2 class="text-4xl font-bold text-primary mb-6">
+          Síguenos en Redes Sociales
+        </h2>
+        <div class="flex justify-center gap-8 text-4xl">
+          <a
+            href="https://www.instagram.com/terragabi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-main-text hover:text-primary-hover transition-colors duration-300"
+            aria-label="Instagram de Terra Gabi"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/terragabi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-main-text hover:text-primary-hover transition-colors duration-300"
+            aria-label="Facebook de Terra Gabi"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.twitter.com/terragabixxx"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-main-text hover:text-primary-hover transition-colors duration-300"
+            aria-label="Twitter de Terra Gabi"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer de la Página -->
+    <footer
+      class="footer-bg text-footer-text text-center py-6 mt-12 rounded-t-xl"
+    >
+      <p>&copy; 2024 Terra Gabi. Todos los derechos reservados.</p>
+      <p>Puerto Deportivo de Mazagón, Huelva.</p>
+    </footer>
+
+    <!-- Enlace a tu archivo de JavaScript personalizado -->
+    <script src="app.js" defer></script>
+  </body>
+</html>

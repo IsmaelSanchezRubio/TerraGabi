@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="icon" href="assets/ico.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carta - Terra Gabi - Cocina Mediterránea Coreana</title>
+    <!-- Carga de Tailwind CSS CDN para estilos rápidos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace a la fuente Inter de Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Enlace a tu archivo de estilos personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen flex flex-col fade-in">
+    <!-- Header de la Página -->
+    <header
+      class="header-bg text-white shadow-lg py-4 px-6 md:px-12 rounded-b-xl"
+    >
+      <nav
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <!-- Nombre del Restaurante -->
+        <a
+          href="index.html"
+          class="text-4xl font-bold text-primary mb-4 md:mb-0 hover:text-primary-hover transition-colors duration-300"
+        >
+          Terra Gabi
+          <span class="text-xl font-normal text-secondary-text">가비</span>
+        </a>
+        <!-- Botones de Navegación -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="carta.html" class="btn-primary">Carta</a>
+          <a href="reserva.html" class="btn-primary">Reserva de Mesa</a>
+          <a href="contacto.html" class="btn-primary">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido Principal de la Carta -->
+    <main class="flex-grow container mx-auto px-6 py-12 md:py-16">
+      <h1
+        class="text-5xl md:text-6xl font-extrabold text-primary text-center mb-12 leading-tight"
+      >
+        Nuestra Carta
+      </h1>
+
+      <!-- Contenedor principal donde se insertarán las categorías y sus productos -->
+      <div id="menu-container">
+        <!-- Los títulos de categoría y los grupos de platos se insertarán aquí mediante JavaScript -->
+      </div>
+    </main>
+
+    <!-- Footer de la Página -->
+    <footer
+      class="footer-bg text-footer-text text-center py-6 mt-12 rounded-t-xl"
+    >
+      <p>&copy; 2024 Terra Gabi. Todos los derechos reservados.</p>
+      <p>Puerto Deportivo de Mazagón, Huelva.</p>
+    </footer>
+
+    <!-- Enlace a tu archivo de JavaScript personalizado -->
+    <script src="app.js" defer></script>
+  </body>
+</html>

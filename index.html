@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="icon" href="assets/ico.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terra Gabi - Cocina Mediterránea Coreana en Mazagón</title>
+    <!-- Carga de Tailwind CSS CDN para estilos rápidos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace a la fuente Inter de Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Enlace a tu archivo de estilos personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body class="min-h-screen flex flex-col fade-in">
+    <!-- Header de la Página -->
+    <header
+      class="header-bg text-white shadow-lg py-4 px-6 md:px-12 rounded-b-xl"
+    >
+      <nav
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <!-- Nombre del Restaurante -->
+        <a
+          href="index.html"
+          class="text-4xl font-bold text-primary mb-4 md:mb-0 hover:text-primary-hover transition-colors duration-300"
+        >
+          Terra Gabi
+          <span class="text-xl font-normal text-secondary-text">가비</span>
+        </a>
+        <!-- Botones de Navegación -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="carta.html" class="btn-primary">Carta</a>
+          <a href="reserva.html" class="btn-primary">Reserva de Mesa</a>
+          <a href="contacto.html" class="btn-primary">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow container mx-auto px-6 py-12 md:py-16">
+      <!-- Sección de Historia y Descripción -->
+      <section class="text-center mb-16">
+        <h1
+          class="text-5xl md:text-6xl font-extrabold text-primary mb-6 leading-tight"
+        >
+          Bienvenido a Terra Gabi
+        </h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-main-text">
+          Ubicado en el pintoresco
+          <strong class="text-primary"
+            >Puerto Deportivo de Mazagón, Huelva</strong
+          >, Terra Gabi es más que un restaurante: es un destino. Aquí, la brisa
+          marina se mezcla con los aromas de una cocina que celebra la riqueza
+          del Mediterráneo y la audacia de Corea. Cada plato es una historia,
+          una fusión de tradiciones y un viaje culinario que te invita a
+          explorar nuevos horizontes de sabor.
+        </p>
+        <p class="text-xl md:text-2xl font-semibold text-primary">
+          Descubre un lugar donde la pasión por la gastronomía se une a unas
+          vistas inigualables.
+        </p>
+      </section>
+
+      <!-- Carrusel de Imágenes del Establecimiento y Vistas -->
+      <section class="mb-16">
+        <h2 class="text-4xl font-bold text-center text-primary mb-8">
+          Nuestras Vistas y Ambiente
+        </h2>
+        <div class="carousel-container max-w-5xl mx-auto shadow-2xl">
+          <div class="carousel-images" id="carousel-images">
+            <!-- Imágenes de ejemplo. ¡Reemplázalas con tus fotos reales! -->
+            <img src="assets/terraza.png" alt="terraza de Terra Gabi" />
+            <img
+              src="assets/interior.png"
+              alt="Interior lujoso del restaurante"
+            />
+            <img src="assets/portada.png" alt="puerta restaurante" />
+            <img
+              src="assets/plato.png"
+              alt="Plato de cocina fusión mediterránea coreana"
+            />
+          </div>
+          <button class="carousel-button prev" onclick="moveCarousel(-1)">
+            &#10094;
+          </button>
+          <button class="carousel-button next" onclick="moveCarousel(1)">
+            &#10095;
+          </button>
+        </div>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </section>
+
+      <!-- Sección de Invitación a la Experiencia Culinaria -->
+      <section
+        class="text-center py-12 bg-section-bg rounded-xl shadow-xl"
+        id="reserva"
+      >
+        <h2 class="text-4xl font-bold text-primary mb-6">
+          Una Experiencia Gastronómica Inolvidable
+        </h2>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-main-text">
+          En Terra Gabi, cada visita es una celebración de los sentidos. Te
+          invitamos a sumergirte en nuestra oferta culinaria única, donde los
+          ingredientes frescos del Atlántico y la tierra onubense se encuentran
+          con la sofisticación y el equilibrio de los sabores coreanos. Descubre
+          platos innovadores, maridados con una cuidada selección de vinos y un
+          servicio excepcional.
+        </p>
+        <p class="text-2xl font-semibold text-primary">
+          ¡Esperamos verte pronto para compartir esta aventura culinaria!
+        </p>
+        <a href="reserva.html" class="mt-8 inline-block btn-primary text-xl">
+          Reserva tu Mesa Ahora
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer de la Página (Opcional, pero buena práctica) -->
+    <footer
+      class="footer-bg text-footer-text text-center py-6 mt-12 rounded-t-xl"
+    >
+      <p>&copy; 2024 Terra Gabi. Todos los derechos reservados.</p>
+      <p>Puerto Deportivo de Mazagón, Huelva.</p>
+    </footer>
+
+    <!-- Enlace a tu archivo de JavaScript personalizado -->
+    <script src="app.js" defer></script>
+  </body>
+</html>

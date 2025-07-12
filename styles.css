@@ -1,0 +1,241 @@
+/* Definición de variables CSS para los colores principales */
+:root {
+  --color-gray-900: #181b20;
+  --color-gray-800: #29303b;
+  --color-gray-500: #a0aec0;
+  --color-gray-400: #cbd5e0;
+  --color-gray-300: #e2e8f0;
+  --color-yellow-300: #fbd38d;
+  --color-yellow-400: #f6ad55;
+  --color-yellow-600: #dd6b20;
+  --color-yellow-700: #c05621;
+}
+
+/* Estilos personalizados para la fuente Inter */
+body {
+  font-family: "Inter", sans-serif;
+  /* Establece un color de fondo oscuro para una sensación de lujo */
+  background-color: var(--color-gray-900); /* gray-900 de Tailwind */
+  color: var(
+    --color-gray-300
+  ); /* gray-200 de Tailwind para el texto principal */
+}
+
+/* Clases generales de color y fondo */
+.header-bg {
+  background-color: var(--color-gray-800); /* bg-gray-800 */
+}
+
+.text-white {
+  /* Tailwind class, but good to ensure it's defined */
+  color: white;
+}
+
+.text-primary {
+  color: var(--color-yellow-300); /* text-yellow-300 */
+}
+
+.hover\:text-primary-hover:hover {
+  color: var(--color-yellow-400); /* hover:text-yellow-400 */
+}
+
+.text-secondary-text {
+  color: var(--color-gray-400); /* text-gray-400 */
+}
+
+.main-text {
+  color: var(--color-gray-300); /* text-gray-300 */
+}
+
+.btn-primary {
+  background-color: var(--color-yellow-600); /* bg-yellow-600 */
+  color: white; /* text-white */
+  font-weight: 600; /* font-semibold */
+  padding: 0.5rem 1.5rem; /* py-2 px-6 */
+  border-radius: 9999px; /* rounded-full */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+  transition: all 0.3s ease; /* transition-all duration-300 */
+  transform: scale(1); /* transform */
+}
+
+.btn-primary:hover {
+  background-color: var(--color-yellow-700); /* hover:bg-yellow-700 */
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+.bg-section-bg {
+  background-color: var(--color-gray-800); /* bg-gray-800 */
+}
+
+.footer-bg {
+  background-color: var(--color-gray-900); /* bg-gray-900 */
+}
+
+.text-footer-text {
+  color: var(--color-gray-500); /* text-gray-500 */
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem; /* rounded-xl */
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  height: 400px; /* Altura fija para las imágenes del carrusel */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+  line-height: 1;
+  border: none;
+  outline: none;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: var(--color-yellow-300); /* yellow-300 de Tailwind */
+}
+
+/* Estilos específicos para los elementos de la carta */
+.menu-item-card {
+  background-color: var(--color-gray-800); /* Fondo de la tarjeta del plato */
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  display: flex; /* Habilita flexbox */
+  flex-direction: column; /* Por defecto, en columna para móviles */
+  overflow: hidden; /* Asegura que la imagen no se desborde del borde redondeado */
+  height: auto; /* Ya no necesitamos altura fija para la tarjeta */
+  padding: 1rem; /* Padding interno para la tarjeta */
+  gap: 1rem; /* Espacio entre la imagen y el contenido en móvil */
+}
+
+@media (min-width: 768px) {
+  /* Para pantallas medianas y más grandes (md) */
+  .menu-item-card {
+    flex-direction: row; /* En fila para desktop (imagen a la izquierda, texto a la derecha) */
+    align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+    gap: 1.5rem; /* Más espacio entre la imagen y el contenido en desktop */
+  }
+}
+
+.menu-item-card img {
+  width: 120px; /* Ancho fijo para la imagen en móvil */
+  height: 120px; /* Altura fija para la imagen en móvil */
+  object-fit: cover; /* Asegura que la imagen cubra el área, recortando si es necesario */
+  border-radius: 0.5rem; /* Bordes redondeados para la imagen */
+  flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+@media (min-width: 768px) {
+  /* Para pantallas medianas y más grandes (md) */
+  .menu-item-card img {
+    width: 150px; /* Ancho fijo para la imagen en desktop */
+    height: 150px; /* Altura fija para la imagen en desktop */
+  }
+}
+
+.menu-item-content {
+  padding: 0; /* El padding ya está en el padre (.menu-item-card) */
+  flex-grow: 1; /* Permite que el contenido crezca para llenar el espacio */
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Por defecto, ocupa todo el ancho restante en móvil */
+}
+
+@media (min-width: 768px) {
+  /* Para pantallas medianas y más grandes (md) */
+  .menu-item-content {
+    width: auto; /* Permite que el contenido ocupe el espacio restante */
+  }
+}
+
+.menu-item-name {
+  font-size: 1.25rem; /* text-xl, reducido para menos saturación */
+  font-weight: 700; /* font-bold */
+  color: var(--color-yellow-300); /* text-primary */
+  margin-bottom: 0.25rem; /* Menos espacio después del nombre */
+}
+
+.menu-item-description {
+  font-size: 0.875rem; /* text-sm, para un texto más conciso */
+  color: var(--color-gray-300); /* main-text */
+  margin-bottom: 0.5rem; /* Menos espacio después de la descripción */
+  flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
+}
+
+.menu-item-price {
+  font-size: 1.125rem; /* text-lg, ligeramente más pequeño */
+  font-weight: 600; /* font-semibold */
+  color: var(--color-yellow-400); /* color amarillo más oscuro para el precio */
+  text-align: left; /* Alinea el precio a la izquierda del texto */
+  margin-top: auto; /* Empuja el precio al final del contenedor de contenido */
+}
+
+.category-title {
+  font-size: 2.5rem; /* text-4xl, reducido de text-5xl */
+  font-weight: 800; /* font-extrabold */
+  text-align: center;
+  color: var(--color-yellow-300);
+  margin-bottom: 2rem; /* mb-8 */
+  margin-top: 2rem; /* mt-8 */
+}
+
+/* Animación de fade-in para la transición de página */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards; /* Duración de 0.8s, suavizado y mantiene el estado final */
+  opacity: 0; /* Inicia con opacidad 0 */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
