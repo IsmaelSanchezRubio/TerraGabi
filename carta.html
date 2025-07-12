@@ -58,9 +58,23 @@
     <footer
       class="footer-bg text-footer-text text-center py-6 mt-12 rounded-t-xl"
     >
-      <p>&copy; 2024 Terra Gabi. Todos los derechos reservados.</p>
+      <p>&copy; 2025 Terra Gabi. Todos los derechos reservados.</p>
       <p>Puerto Deportivo de Mazagón, Huelva.</p>
     </footer>
+
+    <!-- Estructura de la Ventana Modal (oculta por defecto) -->
+    <div id="menu-item-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close-button">&times;</button>
+        <img id="modal-item-image" src="" alt="Imagen del plato" class="modal-image" />
+        <h3 id="modal-item-name" class="modal-name"></h3>
+        <p id="modal-item-description" class="modal-description"></p>
+        <span id="modal-item-price" class="modal-price"></span>
+        <div id="modal-item-allergens" class="modal-allergens-container">
+          <!-- Los alérgenos se insertarán aquí por JavaScript -->
+        </div>
+      </div>
+    </div>
 
     <!-- Enlace a tu archivo de JavaScript personalizado -->
     <script src="app.js" defer></script>
