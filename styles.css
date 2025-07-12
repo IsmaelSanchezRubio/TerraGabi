@@ -197,7 +197,7 @@ body {
   /* Para pantallas pequeñas (móviles) */
   .menu-item-card img {
     width: 100%; /* Imagen ocupa todo el ancho disponible en móvil */
-    height: 190px; /* Altura automática para mantener la proporción */
+    height: 150px; /* Altura automática para mantener la proporción */
   }
 }
 
@@ -348,4 +348,34 @@ body {
   font-weight: 600;
   color: var(--color-yellow-400);
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 465px) {
+  .modal-content {
+    height: auto; /* Altura automática para adaptarse al contenido */
+    padding: 3%;
+    padding-bottom: 0%; /* Sin padding inferior para evitar espacio extra */
+  }
+
+  .modal-name {
+    font-size: 1rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+  }
+  .modal-description {
+    font-size: 0.90rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+  }
+  .modal-image {
+    max-width: 80%; /* Imagen ocupa todo el ancho disponible */
+  }
+  .modal-price {
+    font-size: 1.2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    padding-bottom: 0%;
+  }
+  .modal-allergens-title {
+    font-size: .9rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    margin-bottom: 0.5rem; /* Espacio debajo del título de alérgenos */
+  }
+  .modal-allergens-list {
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    margin-bottom: 1rem; /* Espacio debajo de la lista de alérgenos */
+  }
 }
