@@ -385,3 +385,22 @@ body {
     margin-bottom: 1rem; /* Espacio debajo de la lista de alérgenos */
   }
 }
+
+#reserva-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espacio entre los campos del formulario */
+  background-color: var(--color-gray-800); /* Fondo oscuro para el formulario */
+  padding: 2rem; /* Espacio interno del formulario */
+}
+#formulario-reserva{
+  color: var(--color-gray-900); /* Color del texto del formulario */
+}
+#submit-button {
+  background-color: var(--color-yellow-600); /* Color del botón de reserva */
+  color: white; /* Color del texto del botón */
+  padding: 0.75rem 1.5rem; /* Espacio interno del botón */
+  border-radius: 9999px; /* Bordes redondeados */
+  font-weight: 600; /* Peso de la fuente */
+  text-align: center; /* Centra el texto en el botón */
+}

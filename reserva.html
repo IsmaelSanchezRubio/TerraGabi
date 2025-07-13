@@ -40,15 +40,84 @@
       </nav>
     </header>
 
-    <!-- Contenido Principal -->
+    <!-- Contenido Principal - Formulario de Reserva -->
     <main
       class="flex-grow flex items-center justify-center text-center px-6 py-12 md:py-16 mt-24"
     >
-      <h1
-        class="text-5xl md:text-6xl font-extrabold text-primary leading-tight"
+      <div
+        id="reserva-form"
+        class="bg-white p-8 rounded-lg shadow-xl max-w-lg w-full"
       >
-        Estamos trabajando en ello...
-      </h1>
+        <h1
+          class="text-4xl font-extrabold text-primary mb-6 animate-fade-in-down"
+        >
+          Reserva tu Mesa
+        </h1>
+        <form class="space-y-6" id="formulario-reserva"> 
+          <!-- Campo para la Fecha -->
+          <div>
+            <label
+              for="fecha"
+              class="block text-lg font-semibold text-white text-left mb-2"
+              >Selecciona una fecha:</label
+            >
+            <!-- Input de tipo date para el calendario -->
+            <input
+              type="date"
+              id="fecha"
+              name="fecha"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-lg transition duration-200"
+              required
+            />
+          </div>
+
+          <!-- Campo para la Hora -->
+          <div>
+            <label
+              for="hora"
+              class="block text-lg font-semibold text-white text-left mb-2"
+              >Selecciona una hora:</label
+            >
+            <!-- Select para la hora, se llenará dinámicamente con JavaScript -->
+            <select
+              id="hora"
+              name="hora"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-lg transition duration-200"
+              required
+            >
+              <option value="">-- Selecciona una hora --</option>
+            </select>
+          </div>
+
+          <!-- Campo para el Número de Personas -->
+          <div>
+            <label
+              for="personas"
+              class="block text-lg font-semibold text-white text-left mb-2"
+              >Número de personas:</label
+            >
+            <input
+              type="number"
+              id="personas"
+              name="personas"
+              min="1"
+              max="10"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-lg transition duration-200"
+              placeholder="Ej: 4"
+              required
+            />
+          </div>
+
+          <!-- Botón de Enviar (sin funcionalidad por ahora) -->
+          <button
+            id="submit-button"
+            type="submit"
+            class="w-full bg-primary text-white py-3 px-4 rounded-md hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 text-xl font-bold transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Reservar Ahora
+          </button>
+        </form>
+      </div>
     </main>
 
     <!-- Footer de la Página -->

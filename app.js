@@ -270,7 +270,13 @@ document.addEventListener("DOMContentLoaded", () => {
           "Un decadente brownie de chocolate acompañado de un helado artesanal de sésamo negro coreano y una 'tierra' crujiente de pistachos.",
         price: "7,50",
         image: "assets/platos/20.png",
-        allergens: ["Gluten", "Lactosa", "Huevo", "Sésamo", "Frutos de cáscara (pistachos)"],
+        allergens: [
+          "Gluten",
+          "Lactosa",
+          "Huevo",
+          "Sésamo",
+          "Frutos de cáscara (pistachos)",
+        ],
       },
     ];
 
@@ -365,7 +371,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const modal = document.getElementById("menu-item-modal");
       const modalImage = document.getElementById("modal-item-image");
       const modalName = document.getElementById("modal-item-name");
-      const modalDescription = document.getElementById("modal-item-description");
+      const modalDescription = document.getElementById(
+        "modal-item-description"
+      );
       const modalPrice = document.getElementById("modal-item-price");
       const modalAllergens = document.getElementById("modal-item-allergens");
 
@@ -432,19 +440,57 @@ document.addEventListener("DOMContentLoaded", () => {
 // Lógica para actualizar los enlaces del header en todas las páginas
 document.addEventListener("DOMContentLoaded", () => {
   // Selecciona todos los enlaces de navegación dentro del header
-  const navLinks = document.querySelectorAll('header nav a');
+  const navLinks = document.querySelectorAll("header nav a");
 
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     // Si el enlace es "Home", asegura que apunte a index.html
-    if (link.textContent.includes('Terra Gabi')) { // Usamos el texto del nombre del restaurante para el enlace de inicio
+    if (link.textContent.includes("Terra Gabi")) {
+      // Usamos el texto del nombre del restaurante para el enlace de inicio
       link.href = "index.html";
-    } else if (link.textContent === 'Carta') {
+    } else if (link.textContent === "Carta") {
       link.href = "carta.html";
-    } else if (link.textContent === 'Reserva de Mesa') {
+    } else if (link.textContent === "Reserva de Mesa") {
       // Ahora el enlace de reserva apunta a la nueva página reserva.html
       link.href = "reserva.html";
-    } else if (link.textContent === 'Contacto') {
+    } else if (link.textContent === "Contacto") {
       link.href = "contacto.html";
     }
   });
+});
+
+// Lógica para la funcionalidad de la reserva de mesa (específica de reserva.html)
+document.addEventListener("DOMContentLoaded", () => {
+  const horaSelect = document.getElementById("hora");
+
+  // Función para generar las opciones de hora
+  function generateTimeOptions() {
+    // Limpia las opciones existentes, excepto la primera (placeholder)
+    while (horaSelect.options.length > 1) {
+      horaSelect.remove(1);
+    }
+
+    // Horario de apertura del restaurante (¡AJUSTA ESTO CON EL HORARIO REAL!)
+    // Ejemplo: de 10:00 a 22:00 cada media hora
+    const openHour = 10; // Hora de apertura (ej: 10 para 10:00)
+    const closeHour = 22; // Hora de cierre (ej: 22 para 22:00)
+
+    // Bucle para generar las horas cada media hora
+    for (let h = openHour; h <= closeHour; h++) {
+      for (let m = 0; m < 60; m += 30) {
+        // Formatea la hora y los minutos para que tengan dos dígitos (ej: 09:00, 10:30)
+        const hour = String(h).padStart(2, "0");
+        const minute = String(m).padStart(2, "0");
+        const time = `${hour}:${minute}`;
+
+        // Crea una nueva opción para el selector
+        const option = document.createElement("option");
+        option.value = time;
+        option.textContent = time;
+        horaSelect.appendChild(option);
+      }
+    }
+  }
+
+  // Llama a la función para generar las opciones de hora cuando la página se carga
+  generateTimeOptions();
 });
